@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Team</h2>
+<div class="tabs-container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tabs of tabsArray; let sr = index" (click)="setTab(sr)" (click)="tabChange(sr)">
+      <a class="nav-link" [ngClass]="activatedTab == sr ? 'active' : ''">{{tabs}}</a>
+    </li>
+  </ul>
+  <div class="apps-container">
+    <app-members *ngIf="activatedTabIndex == 0"></app-members>
+    <app-groups *ngIf="activatedTabIndex == 1"></app-groups>
+    <app-reminders *ngIf="activatedTabIndex == 2"></app-reminders>
+  </div> 
+</div>
+</div>
+

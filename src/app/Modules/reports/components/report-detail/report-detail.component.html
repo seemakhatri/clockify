@@ -1,0 +1,256 @@
+<div class="container">
+
+    <div class="calender-container">
+        <div class="row">
+            <div class="col-md-3 form-group">
+               <input type="text"
+                  placeholder="Daterangepicker"
+                  class="form-control"
+                  bsDaterangepicker
+                  [(ngModel)]="bsRangeValue"
+                  [bsConfig]="{ isAnimated: true }">
+            </div>
+         </div>
+    </div>
+
+
+    <div class="filter-container">
+      <div class="filter-col">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              FILTER
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Client
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Task
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tag
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Status
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Description
+            </button>
+            <ul class="dropdown-menu">
+                <div class="search-col">
+                    <div class="search-container">
+                      <i class="material-icons">search</i>
+                      <input type="text" placeholder="Find by name...">
+                    </div>
+                  </div>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+      </div>
+
+      <div class="button-col">
+        <button type="submit" class="btn btn-primary">APPLY FILTER</button>
+      </div>
+    </div>
+
+
+          <div class="table-container">
+            <div class="row">
+                <div class="left">
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <h5>Total :</h5>
+                      <p>00:00:00</p>
+                    </div>
+                  </div>
+                  
+              <div class="right">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EXPORT
+                    </button>
+                    <ul class="dropdown-menu">
+                        <div class="search-col">
+                            <div class="search-container">
+                              <i class="material-icons">search</i>
+                              <input type="text" placeholder="Find by name...">
+                            </div>
+                          </div>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+         
+                <div class="icons">
+                    <i class="fa fa-print"></i>
+                    <i class="fa fa-share"></i>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Show amount
+                    </button>
+                    <ul class="dropdown-menu">
+                        <div class="search-col">
+                            <div class="search-container">
+                              <i class="material-icons">search</i>
+                              <input type="text" placeholder="Find by name...">
+                            </div>
+                          </div>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+              </div>
+             
+            </div>
+        
+
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+                <ng-container matColumnDef="timeEntry">
+                    <th mat-header-cell *matHeaderCellDef>TIME ENTRY</th>
+                    <td mat-cell *matCellDef="let client" >
+                      <a (click)="navigateToProjectSetting(client.name)">{{ client.timeEntry }}</a>
+                    </td>
+                  </ng-container>
+                <!-- Address Column -->
+                <ng-container matColumnDef="amount">
+                  <th mat-header-cell *matHeaderCellDef>AMOUNT</th>
+                  <td mat-cell *matCellDef="let client">{{ client.amount }}</td>
+                </ng-container>
+            
+                <!-- Currency Column -->
+                <ng-container matColumnDef="user">
+                  <th mat-header-cell *matHeaderCellDef>USER</th>
+                  <td mat-cell *matCellDef="let client">{{ client.user }}</td>
+                </ng-container>
+    
+    
+                <!-- Currency Column -->
+                <ng-container matColumnDef="time">
+                    <th mat-header-cell *matHeaderCellDef>TIME</th>
+                    <td mat-cell *matCellDef="let client">{{ client.time }}</td>
+                  </ng-container>
+    
+                     <!-- Currency Column -->
+                <ng-container matColumnDef="duration">
+                    <th mat-header-cell *matHeaderCellDef>DURATION</th>
+                    <td mat-cell *matCellDef="let client">{{ client.duration }}</td>
+                  </ng-container>
+
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+              </table>
+        </div>
+     
+          
+
+</div>
+
+
+
+
+

@@ -1,0 +1,64 @@
+<div class="container">
+
+    <div class="filter-container">
+      <div class="filter-col" *ngFor="let filter of filters">
+        <div class="dropdown" (click)="toggleDropdown(filter)">
+          <button class="dropbtn">{{ filter.name }}</button>
+          <div class="dropdown-content" *ngIf="filter.isOpen">
+            <a href="#" (click)="selectOption(filter, option)" *ngFor="let option of filter.options">{{ option }}</a>
+          </div>
+          <div class="select-arrow"></div>
+        </div>
+      </div>
+    
+      <div class="search-col">
+        <div class="search-container">
+          <i class="material-icons">search</i>
+          <input type="text" placeholder="Find by name...">
+        </div>
+      </div>
+
+      <div class="col-md-6"></div>
+      <div class="addClient-col">
+        <div class="search-container">
+          <input type="text" placeholder="Add new Client...">
+        </div>
+      </div>
+
+      <div class="button-col justify-content-end">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let client">
+          <a (click)="navigateToProjectSetting(client.name)">{{ client.name }}</a>
+        </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="assignes">
+        <th mat-header-cell *matHeaderCellDef>Assignes</th>
+        <td mat-cell *matCellDef="let client">{{ client.assignes }}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let client">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Set as Template</button>
+            <button mat-menu-item (click)="archiveClient(client)">Archive</button>
+          </mat-menu>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+  
+</div>

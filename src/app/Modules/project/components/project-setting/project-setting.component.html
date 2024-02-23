@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Clockify</h2>
+<div class="tabs-container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tabs of tabsArray; let sr = index" (click)="setTab(sr)" (click)="tabChange(sr)">
+      <a class="nav-link" [ngClass]="activatedTab == sr ? 'active' : ''">{{tabs}}</a>
+    </li>
+  </ul>
+  <div class="apps-container">
+    <app-tasks *ngIf="activatedTabIndex == 0"></app-tasks>
+    <app-access *ngIf="activatedTabIndex == 1"></app-access>
+    <app-status *ngIf="activatedTabIndex == 2"></app-status>
+    <app-settings *ngIf="activatedTabIndex == 3"></app-settings>
+  </div> 
+</div>
+</div>

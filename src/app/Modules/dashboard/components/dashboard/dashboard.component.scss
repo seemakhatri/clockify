@@ -1,0 +1,226 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+
+
+    h2 {
+        color: #176B87;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        width: 14%;
+        background: #91C8E4;
+        color: #112B3C;
+        border: 1px solid #91C8E4;
+        border-radius: 0;
+    }
+
+    select {
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 0;
+    }
+
+    .filter-container {
+        display: flex;
+        border:1px solid rgb(229, 229, 229);
+        padding:10px 0;
+    
+    
+    
+        .btn-secondary{
+            background-color: #fff;
+            border-radius: 0;
+            border: 1px solid #9BA4B5;
+            color: #176B87;
+            justify-content: flex-start;
+            width:auto;
+            margin-right: 20px;
+        }
+    
+        .dropdown-menu{
+            list-style: none;
+    
+            li a{
+                list-style: none;
+                text-decoration: none;
+                color: #9BA4B5;
+                padding: 10px;
+            }
+        }
+    
+    
+    
+        .search-col {
+            flex: 0 0 auto;
+    
+            .search-container {
+              position: relative;
+              margin-left: 10px;
+          
+              i.material-icons {
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translateY(-50%);
+                color: #ccc; 
+                cursor: pointer;
+                
+              }
+          
+              input {
+                padding: 8px 8px 8px 40px;
+                width: 100%;
+                border-radius: 0;
+                box-sizing: border-box;
+                border: 1px solid #9BA4B5;
+              }
+            }
+          }
+    
+          .add-input-col{
+            margin-right: 20px;
+            flex: 0 0 auto;
+    
+            .input-container{
+                position: relative;
+            }
+    
+            input {
+                padding: 8px 8px;
+                width: 100%;
+                border-radius: 0;
+                box-sizing: border-box;
+                border: 1px solid #9BA4B5;
+              }
+    
+          }
+    
+        .button-col {
+            flex: 1;
+    
+            button {
+                width: auto;
+            }
+        }
+    }
+
+    .dashboard-container {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+      
+        .row {
+          display: flex;
+          justify-content: row;
+          margin:0px 0px;
+      
+          .custom-card {
+            flex: 1;
+            border: 1px solid #c3c3c3;
+            padding: 15px 0;
+            margin:0 0;
+    
+      
+            .card-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #497896;
+              }
+      
+              .card-text {
+                font-size: 1rem;
+                text-align: center;
+                color: #b1b8bc;
+    
+              }
+          }
+        }
+      }
+      
+      a {
+        text-decoration: underline;
+        color: #176B87;
+        cursor: pointer;
+      }
+    
+      #chart {
+        max-width: 100%;
+        border: 1px solid #c3c3c3;
+        border-top: none;
+      }
+    
+      .second-chart-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+      
+        #second-chart {
+          flex: 0 0 40%; 
+      
+          apx-chart {
+            height: 250px;
+            width: auto; 
+          }
+        }
+      
+        .second-chart-progress {
+          flex: 0 0 48%; 
+          margin-top: 50px;
+      
+          .progress {
+            margin-bottom: 10px;
+            background-color: #fff;
+      
+            .progress-bar {
+              background-color: #85c6f1;
+              border-radius: 0;
+              height: 20px;
+            }
+          }
+        }
+      }
+      
+    
+      select {
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 0;
+    }
+    
+    .mat-elevation-z8 {
+        box-shadow: none;
+        border: 1px solid #c3c3c3;
+        border-top: none;
+    }
+    
+    .mat-header-cell {
+        color: white;
+        border: 1px solid #ccc;
+    }
+    
+    .mat-row:hover {
+        background-color: #f0f0f0;
+    }
+    
+    mat-icon {
+        color: #176B87;
+        font-size: 22px;
+    }
+
+}  
+
+
+
+
+
+
+
+
+  
+  

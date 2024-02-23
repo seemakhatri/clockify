@@ -1,0 +1,210 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+
+        .left-header {
+            color: #176B87;
+        }
+
+        .right-header {
+            .dropdown {
+                position: relative;
+
+                .dropbtn {
+                    background-color: white;
+                    border: 1px solid #e3e3e3;
+                    color: rgb(86, 84, 84);
+                    padding: 8px;
+                    font-size: 16px;
+                    width: 100%;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #ffffff;
+                    min-width: 200px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+
+                    a {
+                        color: rgb(151, 151, 151);
+                        padding: 8px 12px;
+                        text-decoration: none;
+                        display: block;
+
+                        &:hover {
+                            background-color: #efefef;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .dropdown-content {
+                        display: block;
+                    }
+
+                    .dropbtn {
+                        background-color: white;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        color: #176B87;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        width: 14%;
+        background: #91C8E4;
+        color: #112B3C;
+        border: 1px solid #91C8E4;
+        border-radius: 0;
+    }
+
+    select {
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 0;
+    }
+
+    .mat-elevation-z8 {
+        box-shadow: none;
+        border: 1px solid #9BA4B5;
+    }
+
+    .mat-header-cell {
+        background-color: #176B87;
+        color: white;
+        border: 1px solid #ccc;
+    }
+
+    .mat-row:hover {
+        background-color: #f0f0f0;
+    }
+
+    mat-icon {
+        color: #176B87;
+        font-size: 22px;
+    }
+}  
+
+.filter-container {
+    display: flex;
+    margin-bottom: 20px;
+    border:1px solid rgb(229, 229, 229);
+    padding:10px;
+    border: 1px solid #9BA4B5;
+    background-color: white;
+    justify-content: space-between;
+
+    .one{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .two{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-secondary{
+        background-color: #fff;
+        border-radius: 0;
+        border: 1px solid #9BA4B5;
+        color: #176B87;
+        justify-content: flex-start;
+        width:auto;
+    }
+
+    .dropdown-menu{
+        list-style: none;
+
+        li a{
+            list-style: none;
+            text-decoration: none;
+            color: #9BA4B5;
+            padding: 10px;
+        }
+    }
+
+
+
+    .search-col {
+        flex: 0 0 auto;
+
+        .search-container {
+          position: relative;
+          margin-left: 10px;
+      
+          i.material-icons {
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            color: #ccc; 
+            cursor: pointer;
+            
+          }
+      
+          input {
+            padding: 8px 8px 8px 40px;
+            width: 100%;
+            border-radius: 0;
+            box-sizing: border-box;
+            border: 1px solid #9BA4B5;
+          }
+        }
+      }
+
+      .add-input-col{
+        margin-right: 20px;
+        flex: 0 0 auto;
+
+        .input-container{
+            position: relative;
+        }
+
+        input {
+            padding: 8px 8px;
+            width: 100%;
+            border-radius: 0;
+            box-sizing: border-box;
+            border: 1px solid #9BA4B5;
+          }
+
+      }
+
+    .button-col {
+        flex: 1;
+
+        button {
+            width: auto;
+        }
+    }
+}
+
+
+a {
+    text-decoration: underline;
+    color: #176B87;
+    cursor: pointer;
+  }

@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 mat-dialog-title>Create New Project</h1>
+<hr>
+<div mat-dialog-content>
+  <form>
+ <div class="row">
+    <div class="form-group">
+        <label for="name">Enter Project Name:</label>
+        <input type="text" id="name" name="name" matInput required>
+      </div>
+      <div class="form-group">
+        <label for="currency">Select Client</label>
+        <mat-select id="currency" name="currency" matInput required>
+          <mat-option value="usd">USD</mat-option>
+          <mat-option value="eur">EUR</mat-option>
+        </mat-select>
+      </div>
+ </div>
+
+    <div class="row">
+      
+          <div class="form-group">
+              <label for="currency">No Template</label>
+              <mat-select id="currency" name="currency" matInput required>
+                <mat-option value="usd">USD</mat-option>
+                <mat-option value="eur">EUR</mat-option>
+              </mat-select>
+            </div>
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions class="mat-dialog-actions">
+  <button mat-dialog-close class="btn btn-secondary" type="button">Cancel</button>
+  <button class="btn btn-primary" type="submit">Create</button>
+</div>
+
+</div>

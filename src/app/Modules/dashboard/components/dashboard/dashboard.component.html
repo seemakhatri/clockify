@@ -1,0 +1,121 @@
+
+<div class="container">
+    <h2>Dashboard</h2>
+    <div class="filter-container">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Project
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+  </div>
+
+  <div class="dashboard-container">
+    <div class="row">
+      <div class="custom-card">
+          <h5 class="card-title">Top project</h5>
+          <p class="card-text">--</p>
+        </div>
+        <div class="custom-card">
+          <h5 class="card-title">Top project</h5>
+          <p class="card-text">--</p>
+        </div>
+        <div class="custom-card">
+          <h5 class="card-title">Top project</h5>
+          <p class="card-text">--</p>
+        </div>
+  
+    </div>
+  
+  
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions"
+        [yaxis]="chartOptions.yaxis"
+        [xaxis]="chartOptions.xaxis"
+        [stroke]="chartOptions.stroke"
+        [grid]="chartOptions.grid"
+        [fill]="chartOptions.fill"
+        [annotations]="chartOptions.annotations"
+      ></apx-chart>
+    </div>
+  
+  <div class="second-chart-container">
+      <div id="second-chart">
+          <apx-chart
+            [series]="secondChartOptions.series"
+            [chart]="secondChartOptions.chart"
+            [labels]="secondChartOptions.labels"
+            [responsive]="secondChartOptions.responsive"
+          ></apx-chart>
+        </div>
+      
+        <div class="second-chart-progress">
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 50%"></div>
+            </div>
+      
+      
+        </div>
+  </div>
+    </div>
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>TEAM MEMBER</th>
+        <td mat-cell *matCellDef="let client">{{ client.name }}</td>
+      </ng-container>
+    <!-- Address Column -->
+    <ng-container matColumnDef="activity">
+      <th mat-header-cell *matHeaderCellDef>LATEST ACTIVITY</th>
+      <td mat-cell *matCellDef="let client">{{ client.activity }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="progress">
+        <th mat-header-cell *matHeaderCellDef>TOTAL TRACKED</th>
+        <td mat-cell *matCellDef="let client">
+          <!-- Static progress bar 1 -->
+          <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 0%;"></div>
+          </div>
+        </td>
+      </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+</div>
+
+
+
+
+
+

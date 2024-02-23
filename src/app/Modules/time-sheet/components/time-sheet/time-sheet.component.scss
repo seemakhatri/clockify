@@ -1,0 +1,197 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+
+
+    h2 {
+        color: #176B87;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        width: 14%;
+        background: #91C8E4;
+        color: #112B3C;
+        border: 1px solid #91C8E4;
+        border-radius: 0;
+    }
+
+    select {
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 0;
+    }
+
+    .filter-container {
+        display: flex;
+        border:1px solid rgb(229, 229, 229);
+        padding:10px 0;
+    
+    
+    
+        .btn-secondary{
+            background-color: #fff;
+            border-radius: 0;
+            border: 1px solid #9BA4B5;
+            color: #176B87;
+            justify-content: flex-start;
+            width:auto;
+            margin-right: 20px;
+        }
+    
+        .dropdown-menu{
+            list-style: none;
+    
+            li a{
+                list-style: none;
+                text-decoration: none;
+                color: #9BA4B5;
+                padding: 10px;
+            }
+        }
+    
+    
+    
+        .search-col {
+            flex: 0 0 auto;
+    
+            .search-container {
+              position: relative;
+              margin-left: 10px;
+          
+              i.material-icons {
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translateY(-50%);
+                color: #ccc; 
+                cursor: pointer;
+                
+              }
+          
+              input {
+                padding: 8px 8px 8px 40px;
+                width: 100%;
+                border-radius: 0;
+                box-sizing: border-box;
+                border: 1px solid #9BA4B5;
+              }
+            }
+          }
+    
+          .add-input-col{
+            margin-right: 20px;
+            flex: 0 0 auto;
+    
+            .input-container{
+                position: relative;
+            }
+    
+            input {
+                padding: 8px 8px;
+                width: 100%;
+                border-radius: 0;
+                box-sizing: border-box;
+                border: 1px solid #9BA4B5;
+              }
+    
+          }
+    
+        .button-col {
+            flex: 1;
+    
+            button {
+                width: auto;
+            }
+        }
+    }
+
+
+
+    .container {
+        background-color: #fff;
+        margin: 0 0;
+        padding: 0 0;
+        border: 1px solid #9BA4B5;
+
+        .first{
+            color: #697780;
+            background-color: #ebebeb;
+         
+        }
+
+        .second{
+            color: #697780;
+
+            .btn-secondary{
+                background-color: #ffffff;
+                border:none;
+                color: #697780;
+                text-decoration: underline;
+
+            }
+        }
+
+        .third{
+            color: #697780;
+            background-color: #ebebeb;
+        }
+
+    
+        .row {
+            display: flex;
+            justify-content: center; 
+            margin: 0 0;
+            padding: 0 0;
+            align-items: center;
+            
+
+        
+          
+    
+            .col-md-3 {
+                flex: 0 0 40%;
+                h5{
+                    color: #8f9294;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+
+
+    
+            .col-md-1 {
+                flex: 0 0 calc(60% / 8);
+            }
+
+    
+            .col {
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+            }
+    
+            input.col {
+                width: calc(100% - 10px);
+                padding: 1px;
+                border: 1px solid #c8c8c8;
+                margin: 0 0;
+                padding: 0 0;
+            }
+    
+            p {
+                font-size: 11px;
+                font-weight: bold;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    
+    
+
+}  

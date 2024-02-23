@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="visibility-options">
+        <h1>Visibility</h1>
+        <p>Only people you add to the project can track time on it.</p>
+        <label>
+          <input type="radio" name="visibility" value="private"> Private
+        </label>
+    
+        <label>
+          <input type="radio" name="visibility" value="public" > Public
+        </label>
+      </div>
+
+      <hr>
+
+    <div class="filter-container">
+        <div class="filter-col" *ngFor="let filter of filters">
+            <div class="dropdown" (click)="toggleDropdown(filter)">
+              <button class="dropbtn">{{ filter.name }}</button>
+              <div class="dropdown-content" *ngIf="filter.isOpen">
+                <a href="#" (click)="selectOption(filter, option)" *ngFor="let option of filter.options">{{ option }}</a>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let client">{{ client.name }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="billRates">
+          <th mat-header-cell *matHeaderCellDef>Bill Rates</th>
+          <td mat-cell *matCellDef="let client">{{ client.billRates }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef>Role</th>
+          <td mat-cell *matCellDef="let client">{{ client.role }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let client">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Set as Template</button>
+              <button mat-menu-item (click)="archiveClient(client)">Archive</button>
+            </mat-menu>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> 
+</div>

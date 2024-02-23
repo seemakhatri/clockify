@@ -1,0 +1,22 @@
+<div class="container">
+
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" placeholder="Enter name" id="name">
+    </div>
+  </form>
+
+
+  <div class="filter-container">
+    <div class="filter-col" *ngFor="let filter of filters">
+      <div class="dropdown" (click)="toggleDropdown(filter)">
+        <button class="dropbtn">{{ filter.name }}</button>
+        <div class="dropdown-content" *ngIf="filter.isOpen">
+          <a href="#" (click)="selectOption(filter, option)" *ngFor="let option of filter.options">{{ option }}</a>
+        </div>
+        <div class="select-arrow"></div>
+      </div>
+    </div>
+  </div>
+</div>

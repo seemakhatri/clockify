@@ -1,0 +1,90 @@
+<div class="container">
+    <h2>Projects</h2>
+    <div class="mb-4 d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary" (click)="openEditModal()">Create New Project</button>
+    </div>
+    <div class="filter-container">
+      <div class="filter-col" *ngFor="let filter of filters">
+        <div class="dropdown" (click)="toggleDropdown(filter)">
+          <button class="dropbtn">{{ filter.name }}</button>
+          <div class="dropdown-content" *ngIf="filter.isOpen">
+            <a href="#" (click)="selectOption(filter, option)" *ngFor="let option of filter.options">{{ option }}</a>
+          </div>
+          <div class="select-arrow"></div>
+        </div>
+      </div>
+    
+      <div class="search-col">
+        <div class="search-container">
+          <i class="material-icons">search</i>
+          <input type="text" placeholder="Find by name...">
+        </div>
+      </div>
+    
+      <div class="button-col">
+        <button type="submit" class="btn btn-primary">Export</button>
+      </div>
+    </div>
+  
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let client" >
+                  <a (click)="navigateToProjectSetting(client.name)">{{ client.name }}</a>
+                </td>
+              </ng-container>
+            <!-- Address Column -->
+            <ng-container matColumnDef="client">
+              <th mat-header-cell *matHeaderCellDef>Client</th>
+              <td mat-cell *matCellDef="let client">{{ client.client }}</td>
+            </ng-container>
+        
+            <!-- Currency Column -->
+            <ng-container matColumnDef="tracked">
+              <th mat-header-cell *matHeaderCellDef>Tracked</th>
+              <td mat-cell *matCellDef="let client">{{ client.tracked }}</td>
+            </ng-container>
+
+
+            <!-- Currency Column -->
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef>Amount</th>
+                <td mat-cell *matCellDef="let client">{{ client.amount }}</td>
+              </ng-container>
+
+                 <!-- Currency Column -->
+            <ng-container matColumnDef="progress">
+                <th mat-header-cell *matHeaderCellDef>Progress</th>
+                <td mat-cell *matCellDef="let client">{{ client.progress }}</td>
+              </ng-container>
+        
+                      <!-- Currency Column -->
+            <ng-container matColumnDef="access">
+                <th mat-header-cell *matHeaderCellDef>Access</th>
+                <td mat-cell *matCellDef="let client">{{ client.access }}</td>
+              </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let client">
+                    <button mat-icon-button>
+                        <mat-icon class="material-icons-outlined">star</mat-icon>
+                     </button>
+                  <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Set as Template</button>
+                    <button mat-menu-item (click)="archiveClient(client)">Archive</button>
+                    
+                  </mat-menu>
+                </td>
+              </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+          </table>
+  
+</div>

@@ -1,0 +1,51 @@
+.container{
+    padding:0px;
+    margin: 0;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    box-sizing: border-box;
+    max-width: calc(50% - 10px);
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: lighter;
+    }
+
+    input,
+    textarea,
+    mat-select {
+        width: 100%;
+        padding: 8px; 
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background: #B4D4FF;
+    color: #176B87;
+    border: 1px solid #B4D4FF;
+    margin-left: 10px;
+}
+
+.btn-secondary {
+    color: #0F1035;
+    background-color: #FFC7C7;
+    border: 1px solid #FFC7C7;
+}

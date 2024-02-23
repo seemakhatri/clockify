@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 mat-dialog-title>Edit client</h1>
+<hr>
+<div mat-dialog-content>
+    <form>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" matInput required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" matInput required>
+        </div>
+      
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" matInput rows="4" cols="50" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="note">Note</label>
+          <textarea id="note" name="note" matInput rows="4" cols="50" required></textarea>
+        </div>
+      
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      
+      </form>
+      
+</div>
+
+
+</div>
+
+<div mat-dialog-actions class="mat-dialog-actions">
+    <button mat-dialog-close mat-raised-button color="warn" type="button">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Create</button>
+  </div>

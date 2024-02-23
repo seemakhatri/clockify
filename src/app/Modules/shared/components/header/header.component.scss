@@ -1,0 +1,29 @@
+:host *{
+    transition: all 500ms ease-in-out;
+}
+mat-toolbar{
+    position: relative;
+    z-index: 5;
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.content{
+    padding: 5px;
+    background-color: #DDE6ED;
+}
+
+mat-sidenav-container{
+    height:calc(100vh - 64px);
+
+}
+
+mat-sidenav, mat-sidenav-content{
+    transition: all 500ms ease-in-out;
+    border-right: 1px solid rgb(151, 151, 151);
+}
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
