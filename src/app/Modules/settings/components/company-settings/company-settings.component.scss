@@ -1,0 +1,56 @@
+
+.container {
+  
+
+    .tabs-container{
+        background-color: #ffffff;
+        border: 1px solid #9BA4B5;
+
+
+    }
+  
+    .nav-tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      
+  
+      .nav-item {
+        cursor: pointer;
+        margin-right: 10px;
+  
+        .nav-link {
+          text-decoration: none;
+          color: #333;
+          border-radius: 0;
+  
+          &.active {
+            color: #0F1035;
+            background-color: #f8f9fa;
+          }
+        }
+      }
+    }
+    h2 {
+        color: #176B87;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+
+    .apps-container {
+      margin-top: 20px;
+  
+      app-settings{
+        display: none;
+      }
+  
+      app-settings.ng-star-inserted {
+        display: block;
+      }
+    }
+  }
+  

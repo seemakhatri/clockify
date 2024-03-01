@@ -46,6 +46,10 @@ export type SecondChartOptions = {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  bsValue = new Date();
+  bsRangeValue: Date[];
+  maxDate = new Date();
+  minDate = new Date();
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   public secondChartOptions: Partial<SecondChartOptions>;
@@ -59,6 +63,9 @@ export class DashboardComponent {
 
   
   constructor(private fb: FormBuilder, private dialog: MatDialog, private router: Router){
+    this.minDate.setDate(this.minDate.getDate() - 1);
+    this.maxDate.setDate(this.maxDate.getDate() + 7);
+    this.bsRangeValue = [this.bsValue, this.maxDate];
     this.chartOptions = {
       series: [
         {

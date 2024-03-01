@@ -1,0 +1,57 @@
+<div class="container">
+  <form>
+      <div class="profile-info">
+          <h2>Company logo            </h2>
+          <p>Company logo will appear in shared reports and branded PDF exports. Formats: png, jpg, gif. Max size: 1 MB.</p>
+      </div>
+          <div class="profile-upload-container">
+              <label for="profile-image" class="profile-image-label">
+                  <img src="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=1380&t=st=1707667792~exp=1707668392~hmac=3d8b7d02539462d60915c3da2736aca5765b89028fc40aa36ddb8f2716f9cf30" alt="Profile Image" class="profile-image">
+                  <input type="file" id="profile-image" name="profileImage" accept="image/*" style="display: none;">
+              </label>
+              <span class="upload-button">Upload Image</span>
+          </div>
+
+          <!-- Name Field -->
+          <div class="form-group">
+              <label for="name">WorkSpace Name:</label>
+              <input type="text" id="name" name="name" matInput required>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" matInput required>
+          </div>
+
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+
+            <div class="info">
+              <h3>Working days</h3>
+              <h5>Define on which days this user works. </h5>
+              <a>Mon, Tue, Wed, Thu, Fri  </a>  
+            </div>
+            <hr>
+
+            <div class="row g-3 align-items-center hours">
+              <h3>Daily work capacity </h3>
+                 <p> Enter the daily working time capacity.</p>
+              <div class="col-auto">
+                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+              </div>
+              <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">hours per day</label>
+                </div>
+            </div>
+            
+      </form>
+</div>

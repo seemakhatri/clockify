@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <div class="tabs-container">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" *ngFor="let tabs of tabsArray; let sr = index" (click)="setTab(sr)" (click)="tabChange(sr)">
+          <a class="nav-link" [ngClass]="activatedTab == sr ? 'active' : ''">{{tabs}}</a>
+        </li>
+      </ul>
+      <div class="apps-container">
+        <app-settings *ngIf="activatedTabIndex == 0"></app-settings>
+      </div> 
+    </div>
+    </div>

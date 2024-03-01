@@ -1,30 +1,65 @@
-<mat-toolbar class="mat-elevation-z3" >
-<button mat-icon-button (click)="collapsed.set(!collapsed())">
+<mat-toolbar class="mat-elevation-z3">
+  <button mat-icon-button (click)="collapsed.set(!collapsed())">
     <mat-icon>menu</mat-icon>
-</button>
+  </button>
+  <div class="logo">
+    <h5>Time Tracker</h5>
+  </div>
+  <span class="example-spacer"></span>
 
-    <span class="example-spacer"></span>
 
-    <!-- <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div> -->
+  <div class="dropdown dropdown-workspace">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+      Seema Khatri's Workspace
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li class="currently-active">
+        <a class="dropdown-item active" href="#">Another action   <span class="check-icon">&#10003;Active</span></a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="dropdown dropdown-notification">
+    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+      data-bs-display="static">
+      <i class="fa fa-bell"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-center">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
+
+  <div class="dropdown dropdown-profile text-center">
+    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+      data-bs-display="static">
+      <img src="assets/user-profile.png" alt="">
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <span class="name">John Doe </span><br>
+        <span class="email">JohnDoe899gmail.com</span>
+      </li>
+      <li><a routerLink="user-settings" class="dropdown-item" href="#">Profile Settings</a></li>
+      <li><a routerLink="login" class="dropdown-item" href="#">Logout</a></li>
+    </ul>
+  </div>
+
+
 
 </mat-toolbar>
 
 
 
 <mat-sidenav-container>
-    <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
-        <app-sidenav [collapsed]="collapsed()"></app-sidenav>
-    </mat-sidenav>
-    <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+    <app-sidenav [collapsed]="collapsed()"></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>

@@ -6,11 +6,146 @@ mat-toolbar{
     z-index: 5;
     border-bottom: 1px solid rgb(151, 151, 151);
 }
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+.logo{
+    h5{
+        color: #176B87;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+.no-hover {
+    pointer-events: none;
+  }
+
+
+hr{
+    margin:0;
+    padding: 0;
+    color: #9d9d9d; 
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgb(238, 238, 238);
+    color: #a8a8a8;
+    border-radius: 0;
+    width: 300px;
+}
+
+
+.dropdown-item.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0;
+
+    .check-icon {
+        color: #65B741;
+    }
+}
+
+
+.mat-toolbar .dropdown-menu .dropdown-item.active {
+    color: #9d9d9d; 
+    background-color: #e0e0e0;
+}
+
+
+
+.dropdown-notification{
+    margin-right: 20px;
+
+    .btn-secondary{
+        border:1px solid rgb(222, 222, 222);
+        color: #9d9d9d; 
+        border-style: dashed;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 0;
+        font-weight: lighter;
+    }
+
+    .fa-bell{
+        color: #505050; 
+        font-size: 20px;
+    }
+}
+
+.dropdown-profile{
+    .btn-secondary{
+      img{
+        height:35px;
+        width: auto;
+      }
+    }
+
+
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgb(238, 238, 238);
+    color: #a8a8a8;
+    border-radius: 0;
+    width: 250px;
+
+    li{
+       .name{
+        margin: 14px;
+        color:#505050;
+        font-size: 16px;
+        margin-bottom: 0;
+        
+       }
+       .email{
+        margin: 14px;
+        font-size: 14px;
+        margin-bottom: 0;
+       }
+    }
+}
+
+
+    
+}
+
+  .dropdown-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    left: auto !important;
+    right: 0;
+  }
+
+.dropdown-menu a:hover {
+    background-color: #e0e0e0;
+}
+
+
+.btn-secondary {
+    background-color: transparent;
+    border: none;
+    color: #9d9d9d;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
 
 .content{
     padding: 5px;
     background-color: #DDE6ED;
 }
+
 
 mat-sidenav-container{
     height:calc(100vh - 64px);
@@ -23,7 +158,4 @@ mat-sidenav, mat-sidenav-content{
 }
 
 
-.example-spacer {
-    flex: 1 1 auto;
-  }
 

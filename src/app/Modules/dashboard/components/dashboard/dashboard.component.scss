@@ -26,25 +26,46 @@
         border-radius: 0;
     }
 
+
+    .btn:focus {
+      box-shadow: none;
+  }  
+
     .filter-container {
         display: flex;
         border:1px solid rgb(229, 229, 229);
         padding:10px 0;
     
-    
+        .row {
+          display: flex;
+          margin-bottom: 20px;
+          
+              .col-md-3.form-group {
+                input.form-control {
+                  width:auto;
+                  border-radius: 0; 
+                  border:1px solid rgb(211, 211, 211);
+                  color: #9fa4a7;
+                }
+              }
+            }
     
         .btn-secondary{
             background-color: #fff;
             border-radius: 0;
-            border: 1px solid #9BA4B5;
-            color: #176B87;
+            border:1px solid rgb(211, 211, 211);
+            color: #9fa4a7;
             justify-content: flex-start;
             width:auto;
             margin-right: 20px;
         }
     
         .dropdown-menu{
-            list-style: none;
+          background-color: #fff;
+          border:1px solid rgb(217, 217, 217);
+          color: #a8a8a8; 
+          border-radius: 0;
+          width:200px;
     
             li a{
                 list-style: none;
@@ -54,6 +75,7 @@
             }
         }
     
+
     
     
         .search-col {

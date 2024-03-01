@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+
+
+    h2 {
+        color: #176B87;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    
+    form{
+
+
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #9BA4B5;
+        margin-bottom: 20px;
+        border-radius: 0;
+
+        .profile-image-label {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            border: 1px solid #9BA4B5;
+        }
+        
+        .upload-button {
+            bottom: 0;
+            margin-left: 40px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        #profile-image {
+            display: none;
+        }
+        .profile-info{
+
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
+            margin-top: 0;
+    
+            h2{
+                margin: 0;
+                padding: 0;
+                font-weight: 400;
+                color: rgb(52, 52, 52);
+                font-size: 20px ;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                color:#9BA4B5
+            }
+        }
+
+        .form-group {
+            box-sizing: border-box;
+            border-radius: 0;
+        
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: lighter;
+            }
+        
+            
+            input,
+            textarea {
+                width: 100%;
+                padding: 8px; 
+                font-size: 1em;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        
+            textarea {
+                resize: vertical;
+            }
+        }
+
+     
+          
+    }
+    
+  
+
+}  

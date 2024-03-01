@@ -107,70 +107,53 @@
     }
 }  
 
-
 .filter-container {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
     border:1px solid rgb(229, 229, 229);
     padding:10px;
     border: 1px solid #9BA4B5;
     background-color: white;
+    justify-content: space-between;
 
-
-
-    .filter-col {
-        margin-right: 8px;
-        flex: 0 0 7%;
+    .one{
         display: flex;
         flex-direction: row;
-
-       .dropdown{
-        background-color: #fff;
-        margin-right: 5px;
-        
-
-        .btn-secondary{
-            background-color: #fff;
-            border:1px solid rgb(222, 222, 222);
-            color: #9d9d9d; 
-            border-style: dashed;
-            border-top: none;
-            border-bottom: none;
-            border-left: none;
-            border-radius: 0;
-            font-weight: lighter;
-
-        }
-
-        .dropdown-menu{
-            background-color: #fff;
-            border:1px solid rgb(217, 217, 217);
-            color: #a8a8a8; 
-            border-radius: 0;
-            width:300px;
-
-         
-
-            li{
-                a{
-                    text-decoration: none;
-                    color: #a8a8a8; 
-                    padding: 10px;
-                }
-            }
-
-        }
-
-
-       }
     }
+
+    .two{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-secondary{
+        background-color: #fff;
+        border-radius: 0;
+        border: 1px solid #9BA4B5;
+        color: #176B87;
+        justify-content: flex-start;
+        width:auto;
+    }
+
+    .dropdown-menu{
+        list-style: none;
+
+        li a{
+            list-style: none;
+            text-decoration: none;
+            color: #9BA4B5;
+            padding: 10px;
+        }
+    }
+
+
+
     .search-col {
-        flex: 0 0 46%;
-      
+        flex: 0 0 auto;
+
         .search-container {
           position: relative;
-          border:1px solid rgb(217, 217, 217);
+          margin-left: 10px;
       
           i.material-icons {
             position: absolute;
@@ -179,34 +162,45 @@
             transform: translateY(-50%);
             color: #ccc; 
             cursor: pointer;
+            
           }
       
           input {
             padding: 8px 8px 8px 40px;
             width: 100%;
-            border:none;
             border-radius: 0;
             box-sizing: border-box;
+            border: 1px solid #9BA4B5;
           }
         }
       }
 
+      .add-input-col{
+        margin-right: 20px;
+        flex: 0 0 auto;
 
-  
+        .input-container{
+            position: relative;
+        }
 
+        input {
+            padding: 8px 8px;
+            width: 100%;
+            border-radius: 0;
+            box-sizing: border-box;
+            border: 1px solid #9BA4B5;
+          }
 
+      }
 
     .button-col {
-        display: flex;
-        align-items: center; 
-    
+        flex: 1;
+
         button {
             width: auto;
-            color:white;
         }
     }
 }
-
 
 
 a {

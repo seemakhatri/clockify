@@ -23,8 +23,23 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </div>
+         
+            <div class="row">
+                <div class="col-md-3 form-group">
+                   <input type="text"
+                      placeholder="Daterangepicker"
+                      class="form-control"
+                      bsDaterangepicker
+                      [(ngModel)]="bsRangeValue"
+                      [bsConfig]="{ isAnimated: true }">
+                </div>
+             </div>
+    
+        
 
   </div>
+
+
 
   <div class="dashboard-container">
     <div class="row">
